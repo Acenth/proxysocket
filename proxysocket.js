@@ -1,6 +1,6 @@
 
 
-var net = require('net');
+var net = require('react-native-tcp');
 var EventEmitter = require('events').EventEmitter;
 var inherits = require('util').inherits;
 
@@ -422,7 +422,7 @@ proxysocket.create = function (socksHost, socksPort, socket) {
 // A simple agent so that requests can be made using http.request()
 // and anything else using the same Agent API
 proxysocket.createAgent = function (socksHost, socksPort) {
-	var http = require('http');
+	var http = require('react-native-http');
 
 	var agent = new http.Agent({
 	//	keepAlive: true
